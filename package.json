@@ -1,0 +1,21 @@
+{
+  "name": "smart-mirror",
+  "version": "0.0.1",
+  "description": "Smart mirror with facial recognition profiles for multiple users, widgets to keep you informed during your morning routine, all controlled by voice interaction.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smart",
+    "mirror",
+    "face",
+    "recognition",
+    "voice"
+  ],
+  "author": "Selwyn Lehmann",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
