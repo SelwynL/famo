@@ -1,4 +1,4 @@
-var config = {
+var defaultConfig = {
     
 	port: 4589,
     
@@ -19,31 +19,7 @@ var config = {
     },
     
     widgets: [
-        {
-            name: 'textfield',
-            position: 1,
-            classes: 'bold',
-            config: {
-                text: 'This is my first widget!!'
-            }
-        },
-        {
-            name: 'clock',
-            position: 2,
-            classes: 'bold',
-            config: {
-                timeformat: 12,
-                showPeriod: true
-            }
-        },
-        {
-            name: 'textfield',
-            position: 3,
-            classes: 'bold',
-            config: {
-                text: 'This is my second widget!!'
-            }
-        } 
+    
     ],
     
     paths: {
@@ -52,4 +28,4 @@ var config = {
 	}
 };
 
-if (typeof module !== 'undefined') { module.exports = config; }
+if (typeof module !== 'undefined') { module.exports = defaultConfig; }

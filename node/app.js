@@ -6,6 +6,7 @@ var App = function() {
     
     var loadConfig = function(callback) {
 		console.log('Loading config...');
+        console.log(__dirname);
 		//var defaults = require('/defaults.js');
 		var configFilename = Path.resolve(__dirname + '/../config/config.js');
 		try {
@@ -14,8 +15,7 @@ var App = function() {
 			//var config = Object.assign(defaults, c);
 			callback(config);
 		} catch (e) {
-            console.error(e);
-			console.error('WARNING! Could not find config...');
+			console.error('WARNING! Could not find config: ' + e);
 			//callback(defaults);
 		}
 	};
