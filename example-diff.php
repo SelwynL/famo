@@ -1,5 +1,2 @@
-    if ($event->getViewerIsInvited()) {
-        $icon_icon = 'green';
-    } else {
-        $icon_color = null;
-    }
+    $icon_icon = $event->getIcon();
+    $icon_color = $event->getIconColor();
