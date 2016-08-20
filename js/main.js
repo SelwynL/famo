@@ -19,16 +19,16 @@ var Famo = (function () {
         console.log('Rendering widgets...');
         /*
         {
-            id: 'facebook',
+            id: 'weather',
             col: 1,
-            row: 5,
+            row: 1,
             size_x: config.layout.summary.width,
             size_y: config.layout.summary.height
         },
         {
-            id: 'selwyn',
+            id: 'clock',
             col: 1,
-            row: 6,
+            row: 2,
             size_x: config.layout.summary.width,
             size_y: config.layout.summary.height
         }
@@ -36,9 +36,11 @@ var Famo = (function () {
         
         /* Serialize the layout for consumption by the renderer */
         var layoutSerialization = widgetObjects.map(function (widget) {
+            console.log("dom-" + widget.id + " " + widget.getDOM());
             return {
                 dom: widget.getDOM(),
                 id: widget.id,
+                classes: widget.classes,
                 col: 1,
                 row: widget.position,
                 size_x: config.layout.summary.width,

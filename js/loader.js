@@ -30,17 +30,17 @@ var Loader = (function () {
                 path: widgetFolder,
                 position: widgetData.position,
                 config: widgetData.config,
-                classes: (typeof widgetData.classes !== 'undefined') ? widgetData.classes : widgetName
+                classes: (typeof widgetData.classes !== 'undefined') ? widgetName + ' ' + widgetData.classes : widgetName
             });
         }
         return widgets;
     };
     
     var loadFile = function (fileUrl, filetype) {
-        console.log('Load file: [' + filetype + ' - ' + fileUrl + ']...');
+        //console.log('Load file: [' + filetype + ' - ' + fileUrl + ']...');
         
         if (loadedFiles.indexOf(fileUrl) !== -1) {
-            console.log('File "' + fileUrl + '" already loaded...');
+            //console.log('File "' + fileUrl + '" already loaded...');
             return Q.resolve(fileUrl);
         }
         
@@ -98,7 +98,7 @@ var Loader = (function () {
     };
     
     var bootStrapWidget = function (widgetData) {
-        console.log('Bootstrapping: ' + widgetData.name + '...');
+        //console.log('Bootstrapping: ' + widgetData.name + '...');
         
         var widgetObject = Widget.create(widgetData.name);
         widgetObject.setData(widgetData);
@@ -124,7 +124,7 @@ var Loader = (function () {
         var loadedWidgetObjects = [];
         var widgetDataList = getWidgets();
         
-        console.log('Loading ' + widgetDataList.length + ' widgets...');
+        //console.log('Loading ' + widgetDataList.length + ' widgets...');
         
         return Q.allSettled(widgetDataList.map(function (widgetData) {
             return loadWidget(widgetData)

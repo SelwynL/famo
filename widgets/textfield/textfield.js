@@ -5,9 +5,9 @@ Widget.register('textfield', {
     },
     
     getDOM: function () {
-     
-        var content = document.createElement("span");
-        content.innerHTML = this.config.text;
-        return content;
+        return '<span>stufffff</span>';
+//        var content = document.createElement("span");
+//        content.innerHTML = this.config.text;
+//        return content;
     }
 });

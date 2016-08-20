@@ -116,7 +116,7 @@ var Layout = (function () {
             dataGrid = Gridster.sort_by_row_and_col_asc(dataGrid);
 
             $.each(dataGrid, function () {
-                gridster.add_widget('<li id="' + this.id + '">' + this.id + '</li>', this.size_x, this.size_y, this.col, this.row);
+                gridster.add_widget('<li id="' + this.id + '" class="' + this.classes + '">' + this.dom + '</li>', this.size_x, this.size_y, this.col, this.row);
             });
 
             gridster.$el.on('click', '> li', function () {

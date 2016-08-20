@@ -32,18 +32,11 @@ var config = {
             position: 2,
             classes: 'bold',
             config: {
-                timeformat: 12,
-                showPeriod: true
+                timeFormat: 12,
+                showPeriod: false,  /* Shows AM/PM */
+                digital: false      /* Digital or Analog clock face */
             }
-        },
-        {
-            name: 'textfield',
-            position: 3,
-            classes: 'bold',
-            config: {
-                text: 'This is my second widget!!'
-            }
-        } 
+        }
     ],
     
     paths: {
